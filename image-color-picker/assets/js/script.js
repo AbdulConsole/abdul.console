@@ -1,3 +1,10 @@
+document.querySelector('.right').addEventListener(
+  'click', () => {
+        window.location.href = './..';
+  }
+);
+
+
 document.getElementById('custom-upload-button').addEventListener('click', function() {
   document.getElementById('upload').click();
 });
