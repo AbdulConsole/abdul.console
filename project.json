@@ -1,0 +1,29 @@
+{
+    "projects": [
+        {
+            "name": "Learn Zodiac Sign",
+            "thumbnail": "assets/images/thumbnail-1.jpeg",
+            "url": "./zodiac"
+        },
+        {
+            "name": "Astrological Constellation",
+            "thumbnail": "assets/images/thumbnail-2.webp",
+            "url": "./constellation"
+        },
+        {
+            "name": "Image Color Picker",
+            "thumbnail": "assets/images/thumbnail-3.jpg",
+            "url": "./image-color-picker"
+        },
+        {
+            "name": "About Device",
+            "thumbnail": "assets/images/thumbnail-4.jpg",
+            "url": "./my-screen-size"
+        },
+        {
+            "name": "Calculator Figures",
+            "thumbnail": "assets/images/thumbnail-5.jpg",
+            "url": "./calculator-figures"
+        }
+    ]
+}
