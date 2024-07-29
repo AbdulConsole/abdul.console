@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Puzzle Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <h1>Welcome to the Puzzle Quiz</h1>
+        <button id="next-button">Next</button>
+    </div>
+    
+    <div id="upload-screen" style="display:none;">
+        <h2>Upload an Image</h2>
+        <input type="file" id="image-upload">
+        <div id="loader" style="display:none;">Loading...</div>
+    </div>
+    
+    <div id="puzzle-screen" style="display:none;">
+        <div id="puzzle-container"></div>
+        <button onclick="moveTile(0, 1)">Move Right</button>
+        <button onclick="moveTile(0, -1)">Move Left</button>
+        <button onclick="moveTile(1, 0)">Move Down</button>
+        <button onclick="moveTile(-1, 0)">Move Up</button>
+        <div id="timer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

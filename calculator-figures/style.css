@@ -1,0 +1,27 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#puzzle-container {
+    display: grid;
+    gap: 2px;
+    background-color: #ddd;
+}
+
+.puzzle-piece {
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.puzzle-piece.empty {
+    background-color: transparent;
+    cursor: default;
+}
