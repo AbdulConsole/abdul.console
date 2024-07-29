@@ -3,30 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Puzzle Quiz</title>
+    <title>Figures Generator</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/common-styles.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="welcome-screen">
-        <h1>Welcome to the Puzzle Quiz</h1>
-        <button id="next-button">Next</button>
-    </div>
+  <section class="nav">
+    <div class="right"><i class="fa-solid fa-arrow-left"></i></div>
+    <div class="left">Figures Generator</div>
+  </section>
+        <!-- If you want to understand this project, watch this first -- https://www.instagram.com/reel/C98dHXSMwJx/?igsh=MWJrNXd5cnJmMmNiZQ== -->
+        <section class="intro">
+        <p>Basically all numeric figures on the calculator are generate from different strokes of the figure eight.</p>
+        <button class="source">Watch Source</button>
+        </section>
+        
+        <section class="board">
+            <div class="sec hor">
+                <div class="node one"></div>
+            </div>
+            <div class="sec vert">
+                <div class="node two"></div>
+                <div class="node three"></div>
+            </div>
+            <div class="sec hor">
+                <div class="node four"></div>
+            </div>
+            <div class="sec vert">
+                <div class="node five"></div>
+                <div class="node six"></div>
+            </div>
+            <div class="sec hor">
+                <div class="node seven"></div>
+            </div>
+        </section>
+        
+        <section class="btns">
+            <div class="card btn1">1</div>
+            <div class="card btn2">2</div>
+            <div class="card btn3">3</div>
+            <div class="card btn4">4</div>
+            <div class="card btn5">5</div>
+            <div class="card btn6">6</div>
+            <div class="card btn7">7</div>
+            <div class="card btn8">8</div>
+            <div class="card btn9">9</div>
+            <div class="card btn0">0</div>
+            <div class="card clear">clear</div>
+        </section>
+        
     
-    <div id="upload-screen" style="display:none;">
-        <h2>Upload an Image</h2>
-        <input type="file" id="image-upload">
-        <div id="loader" style="display:none;">Loading...</div>
-    </div>
-    
-    <div id="puzzle-screen" style="display:none;">
-        <div id="puzzle-container"></div>
-        <button onclick="moveTile(0, 1)">Move Right</button>
-        <button onclick="moveTile(0, -1)">Move Left</button>
-        <button onclick="moveTile(1, 0)">Move Down</button>
-        <button onclick="moveTile(-1, 0)">Move Up</button>
-        <div id="timer"></div>
-    </div>
-
+    <section class="foot">
+      <p>Made with ❤️ by Abdulconsole</p>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

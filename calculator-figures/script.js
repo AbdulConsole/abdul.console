@@ -1,129 +1,158 @@
-document.getElementById('next-button').addEventListener('click', () => {
-    document.getElementById('welcome-screen').style.display = 'none';
-    document.getElementById('upload-screen').style.display = 'block';
+window.onload= function (){
+
+//    Colors
+on = "green";
+off = "#efefff";
+dim = "transparent";
+
+//    Lead lights lol
+const lone = document.querySelector(".one");
+const ltwo = document.querySelector(".two");
+const lthree = document.querySelector(".three");
+const lfour = document.querySelector(".four");
+const lfive = document.querySelector(".five");
+const lsix = document.querySelector(".six");
+const lseven = document.querySelector(".seven");
+
+//    Number buttons 0-9
+const btn0 = document.querySelector(".btn0");
+const btn1 = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2");
+const btn3 = document.querySelector(".btn3");
+const btn4 = document.querySelector(".btn4");
+const btn5 = document.querySelector(".btn5");
+const btn6 = document.querySelector(".btn6");
+const btn7 = document.querySelector(".btn7");
+const btn8 = document.querySelector(".btn8");
+const btn9 = document.querySelector(".btn9");
+const clear = document.querySelector(".clear");
+
+
+btn1.addEventListener("click", function () {
+    lone.style.backgroundColor = dim;
+    ltwo.style.backgroundColor = dim;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = dim;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = dim;
 });
 
-document.getElementById('image-upload').addEventListener('change', () => {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'block';
-
-    setTimeout(() => {
-        loader.style.display = 'none';
-        document.getElementById('upload-screen').style.display = 'none';
-        document.getElementById('puzzle-screen').style.display = 'block';
-        initializePuzzle();
-    }, 10000);
+btn2.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = dim;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = on;
+    lsix.style.backgroundColor = dim;
+    lseven.style.backgroundColor = on;
 });
 
-function initializePuzzle() {
-    const puzzleContainer = document.getElementById('puzzle-container');
-    const imageFile = document.getElementById('image-upload').files[0];
-    const imageSrc = URL.createObjectURL(imageFile);
-    const gridSize = 3; // 3x3 grid
+btn3.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = dim;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-    const img = new Image();
-    img.src = imageSrc;
-    img.onload = () => {
-        const pieceWidth = img.width / gridSize;
-        const pieceHeight = img.height / gridSize;
+btn4.addEventListener("click", function () {
+    lone.style.backgroundColor = dim;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = dim;
+});
 
-        puzzleContainer.style.gridTemplateColumns = `repeat(${gridSize}, ${pieceWidth}px)`;
-        puzzleContainer.style.gridTemplateRows = `repeat(${gridSize}, ${pieceHeight}px)`;
+btn5.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = dim;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-        let pieces = [];
-        for (let row = 0; row < gridSize; row++) {
-            for (let col = 0; col < gridSize; col++) {
-                const piece = document.createElement('div');
-                piece.classList.add('puzzle-piece');
-                piece.style.width = `${pieceWidth}px`;
-                piece.style.height = `${pieceHeight}px`;
-                piece.style.backgroundImage = `url(${img.src})`;
-                piece.style.backgroundPosition = `${-col * pieceWidth}px ${-row * pieceHeight}px`;
-                piece.style.backgroundSize = `${img.width}px ${img.height}px`;
-                piece.dataset.row = row;
-                piece.dataset.col = col;
-                pieces.push(piece);
-            }
-        }
+btn6.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = dim;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = on;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-        pieces = shuffleArray(pieces);
-        const lastPiece = pieces.pop();
-        lastPiece.classList.add('empty');
-        lastPiece.style.backgroundImage = 'none';
+btn7.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = dim;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = dim;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = dim;
+});
 
-        puzzleContainer.innerHTML = '';
-        pieces.forEach(piece => puzzleContainer.appendChild(piece));
-        puzzleContainer.appendChild(lastPiece);
+btn8.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = on;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-        document.querySelectorAll('.puzzle-piece').forEach(piece => piece.addEventListener('click', handlePieceClick));
-    };
-}
+btn9.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = on;
+    lfive.style.backgroundColor = dim;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+btn0.addEventListener("click", function () {
+    lone.style.backgroundColor = on;
+    ltwo.style.backgroundColor = on;
+    lthree.style.backgroundColor = on;
+    lfour.style.backgroundColor = dim;
+    lfive.style.backgroundColor = on;
+    lsix.style.backgroundColor = on;
+    lseven.style.backgroundColor = on;
+});
 
-function handlePieceClick(event) {
-    const piece = event.target;
-    const emptyPiece = document.querySelector('.puzzle-piece.empty');
+clear.addEventListener("click", function () {
+    lone.style.backgroundColor = off;
+    ltwo.style.backgroundColor = off;
+    lthree.style.backgroundColor = off;
+    lfour.style.backgroundColor = off;
+    lfive.style.backgroundColor = off;
+    lsix.style.backgroundColor = off;
+    lseven.style.backgroundColor = off;
+});
 
-    if (!piece.classList.contains('empty') && isAdjacent(piece, emptyPiece)) {
-        movePiece(piece, emptyPiece);
-        if (isPuzzleSolved()) {
-            alert('Congratulations! 🎉');
-        }
-    }
-}
 
-function isAdjacent(piece1, piece2) {
-    const row1 = parseInt(piece1.dataset.row);
-    const col1 = parseInt(piece1.dataset.col);
-    const row2 = parseInt(piece2.dataset.row);
-    const col2 = parseInt(piece2.dataset.col);
 
-    return (Math.abs(row1 - row2) === 1 && col1 === col2) || (Math.abs(col1 - col2) === 1 && row1 === row2);
-}
 
-function movePiece(piece1, piece2) {
-    const tempRow = piece1.dataset.row;
-    const tempCol = piece1.dataset.col;
 
-    piece1.dataset.row = piece2.dataset.row;
-    piece1.dataset.col = piece2.dataset.col;
+document.querySelector(".source").addEventListener("click", () => {
+    window.location.href = 'https://www.instagram.com/reel/C98dHXSMwJx/?igsh=MWJrNXd5cnJmMmNiZQ==';
+});
 
-    piece2.dataset.row = tempRow;
-    piece2.dataset.col = tempCol;
 
-    piece1.classList.add('empty');
-    piece2.classList.remove('empty');
+document.querySelector('.right').addEventListener(
+  'click', () => {
+        window.location.href = './..';
+  }
+);
 
-    // Swap the pieces visually
-    piece1.style.backgroundImage = piece2.style.backgroundImage;
-    piece1.style.backgroundPosition = piece2.style.backgroundPosition;
 
-    piece2.style.backgroundImage = 'none';
-    piece2.style.backgroundPosition = 'none';
-}
 
-function isPuzzleSolved() {
-    const pieces = document.querySelectorAll('.puzzle-piece');
-    const gridSize = 3; // Adjust if the grid size changes
-    const size = parseInt(pieces[0].style.width);
-
-    for (const piece of pieces) {
-        if (!piece.classList.contains('empty')) {
-            const row = parseInt(piece.dataset.row);
-            const col = parseInt(piece.dataset.col);
-            const bgPos = piece.style.backgroundPosition;
-            const expectedPos = `${-col * size}px ${-row * size}px`;
-            if (bgPos !== expectedPos) {
-                return false;
-            }
-        }
-    }
-    return true;
 }

@@ -1,27 +1,102 @@
-/* style.css */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 body {
-    font-family: Arial, sans-serif;
+    background-color: #ddddef;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+}
+.intro {
+    text-align: justify;
+    margin: 5px 50px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 26px;
+    background-color: #b4b4ee;
+    margin-top: 20px;
 }
 
-#puzzle-container {
+.board {
+    width: 300px;
+    height: 300px;
+    /*border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hor {
+    height: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vert {
+    height: 100px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hor .node {
+    width: 100px;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefff;
+    box-shadow: 2px 2px 8px #aaaaff;
+}
+.vert .node {
+    width: 10px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefff;
+    box-shadow: 2px 2px 8px #aaaaff;
+    transform: rotate(90deg);
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(00deg);
+    -o-transform:rotate(0deg); 
+}
+
+
+
+.btns {
+    min-height: 200px;
+    min-width: 150px;
+    margin-top: 100px;
     display: grid;
-    gap: 2px;
-    background-color: #ddd;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    
 }
 
-.puzzle-piece {
-    background-color: #fff;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.puzzle-piece.empty {
-    background-color: transparent;
-    cursor: default;
+.card {
+    height: 50px;
+    background-color: #eeeeff;
+    box-shadow: 1px 1px 4px #aaf;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
