@@ -20,5 +20,5 @@ fetch('project.json')
   
   
   document.querySelector('.fa-home').addEventListener('click', () => {
-    location.href = 'index.html';
+    location.href = './..';
   });
