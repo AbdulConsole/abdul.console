@@ -72,6 +72,6 @@ search.addEventListener('click', () => {
 
 document.querySelector('.right').addEventListener(
   'click', () => {
-        window.location.href = './..';
+        window.location.href = './../catalog.html';
   }
 );

@@ -3,7 +3,7 @@ var countDownDate = new Date("Dec 1, 2024 00:00:00").getTime();
 
 document.querySelector('.right').addEventListener(
   'click', () => {
-        window.location.href = './..';
+        window.location.href = './../catalog.html';
   }
 );
 
