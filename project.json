@@ -29,6 +29,11 @@
             "name": "Local Storage DB",
             "thumbnail": "assets/images/thumbnail-6.jpg",
             "url": "./localStorage"
+        },
+        {
+            "name": "Weather ☁️ App",
+            "thumbnail": "assets/images/thumbnail-7.jpg",
+            "url": "./weather"
         }
     ]
 }

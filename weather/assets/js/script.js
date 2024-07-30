@@ -69,3 +69,9 @@ search.addEventListener('click', () => {
     });
 
 });
+
+document.querySelector('.right').addEventListener(
+  'click', () => {
+        window.location.href = './..';
+  }
+);

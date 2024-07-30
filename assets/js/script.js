@@ -16,3 +16,9 @@ fetch('project.json')
     });
   })
   .catch(error => console.error('Error loading projects:', error));
+  
+  
+  
+  document.querySelector('.fa-home').addEventListener('click', () => {
+    location.href = 'index.html';
+  });
