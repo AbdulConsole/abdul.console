@@ -24,6 +24,11 @@
             "name": "Calculator Figures",
             "thumbnail": "assets/images/thumbnail-5.jpg",
             "url": "./calculator-figures"
+        },
+        {
+            "name": "Local Storage DB",
+            "thumbnail": "assets/images/thumbnail-6.jpg",
+            "url": "./localStorage"
         }
     ]
 }

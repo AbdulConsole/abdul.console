@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage DB Example</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/common-styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #queryInput {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #5AD561;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #5ad561;
+            background-color: #f9f9f9;
+            width: 80%;
+        }
+        h1 {
+          color: #6EB1D3;
+          text-shadow: 1px 1px 4px ##D9E8E6;
+          margin-top: 80px;
+          margin-bottom: -10px;
+        }
+        h3 {
+          color: #fff;
+          font-weight: 400;
+          text-shadow: 1px 1px 4px #a2a2FF;
+          text-transform: uppercase;
+          font-size: 26px;
+        }
+        .example {
+          font-size: 24px;
+        }
+    </style>
+    <script src="lib.js" defer></script>
+</head>
+<body>
+  <section class="nav">
+    <div class="right"><i class="fa-solid fa-arrow-left"></i></div>
+    <div class="left">Local Storage DB</div>
+  </section>
+  <!--
+  
+  db.insert({name:'Abdul', age: 28})
+  db.update(4, { name: 'Jane Doe', age: 65 })
+  db.delete(0)
+  db.retrieve()
+  
+  -->
+  
+  
+    <h1>LocalStorage DB Example</h1>
+    <h3>insert / update / retrieve / delete</h3>
+    <p><span class="example">Example: </span><br>
+      db.insert({name:'Abdul Console', age: 55}) <br>
+      db.update(2, { name: 'Abdul Console', age: 65 }) <br>
+      db.delete(0) <br>
+      db.retrieve()
+    </p>
+    <input type="text" id="queryInput" placeholder="Enter your query here">
+    <div id="output"></div>
+    
+    
+    <section class="foot">
+      <p>Made with ❤️ by Abdulconsole</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const db = new LocalStorageDB('myDatabase');
+            const queryInput = document.getElementById('queryInput');
+            const output = document.getElementById('output');
+
+            queryInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    try {
+                        const query = queryInput.value;
+                        const result = eval(query);
+                        output.innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
+                    } catch (error) {
+                        output.innerHTML = `<pre style="color: red;">Error: ${error.message}</pre>`;
+                    }
+                }
+            });
+        });
+        
+        document.querySelector('.right').addEventListener('click', () => {
+          window.location.href = './..';
+          }
+          );
+    </script>
+</body>
+</html>
