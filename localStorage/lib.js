@@ -37,4 +37,10 @@ class LocalStorageDB {
             throw new Error("Invalid index");
         }
     }
+
+    deleteAll() {
+        this.data = [];
+        this.save();
+        return this.data;
+    }    
 }
