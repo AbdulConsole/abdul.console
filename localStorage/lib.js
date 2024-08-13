@@ -38,9 +38,18 @@ class LocalStorageDB {
         }
     }
 
-    deleteAll() {
-        this.data = [];
+    deleteAll(range = null) {
+        if (range) {
+            const [start, end] = range.split('-').map(Number);
+            if (isNaN(start) || isNaN(end) || start < 0 || end >= this.data.length || start > end) {
+                throw new Error("Invalid range");
+            }
+            this.data.splice(start, end - start + 1);
+        } else {
+            this.data = [];
+        }
         this.save();
         return this.data;
-    }    
+    }
+       
 }
