@@ -1,7 +1,7 @@
 .nav {
   background: linear-gradient(135deg, rgba(252,254,255,1) 315%, rgba(218,227,237,1) 100%);
   width: 100vw;
-  height: 50px;
+  height: 60px;
   padding: 20px;
   margin: 0 50px;
   position: fixed;
@@ -28,6 +28,7 @@
   position: fixed;
   z-index: 2;
   bottom: 0;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
