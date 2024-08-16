@@ -12,7 +12,7 @@
 
 ## Deployment
 
-The website is deployed using [GitHub Pages](https://github.com). You can visit it [here](https://abdulconsole.com.ng) .
+The website is deployed using [GitHub Pages](https://github.com). You can visit it [here](https://abdulconsole.com.ng)
 
 ## Contributing
 
