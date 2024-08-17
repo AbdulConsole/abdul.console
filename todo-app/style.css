@@ -22,7 +22,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /*align-items: center;*/
 }
 
 button {
@@ -32,7 +31,6 @@ button {
   font-weight: 600;
   letter-spacing: 2.8;
   border-radius: 7px;
-  /*box-shadow: 1px 1px 1px #141A399E;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -46,10 +44,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*margin-top: 200px;
-  border: 1px solid #eee;*/
   background: #FFFFFF;
-  /*box-shadow: 1px 1px 1px #141A399E;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   min-height: 150px;
@@ -75,12 +70,10 @@ table {
   margin-top: 50px;
   width: 350px;
   text-align: left;
-  /*border: 1px solid black;*/
   font-size: 18px;
   font-weight: 600;
 }
 table tr td, th {
-  /*background: red;*/
   padding: 10px 0;
 }
 .actions button {
