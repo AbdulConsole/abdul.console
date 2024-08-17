@@ -76,6 +76,8 @@ table {
   width: 350px;
   text-align: left;
   /*border: 1px solid black;*/
+  font-size: 18px;
+  font-weight: 600;
 }
 table tr td, th {
   /*background: red;*/
