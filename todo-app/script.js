@@ -43,20 +43,18 @@ function createEntryElement(entry) {
             <button class="complete">✔️ Done</button>
         </td>
     `;
-    // Add event listener for the "Done" button
     enteredEntry.querySelector('.complete').addEventListener('click', () => {
         removeEntry(entry.name);
-        triggerConfetti(); // Trigger confetti when an entry is completed
+        triggerConfetti();
     });
     return enteredEntry;
 }
 
 function triggerConfetti() {
-    const duration = 4 * 1000; // 4 seconds
+    const duration = 2 * 1000; // 2 seconds
     const end = Date.now() + duration;
 
     (function frame() {
-        // Ensure the confetti runs at intervals
         confetti({
             particleCount: 3,
             angle: 60,
@@ -83,18 +81,6 @@ function removeEntry(entryName) {
     renderEntries();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function renderEntries() {
     const entries = JSON.parse(localStorage.getItem('todos')) || [];
     const tbody = table.querySelector('tbody') || document.createElement('tbody');
@@ -109,5 +95,5 @@ function renderEntries() {
     }
 }
 
-// Initial render on page load
+// Initial render on pg
 document.addEventListener('DOMContentLoaded', renderEntries);
