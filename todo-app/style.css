@@ -53,12 +53,12 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   min-height: 150px;
-  width: 300px;
+  width: 360px;
   display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  font-size: 22px;
+  font-size: 20px;
   padding: 10px;
 }
 
@@ -69,6 +69,7 @@ button {
   border-radius: 5px;
   padding: 4px;
   width: 90%;
+  margin: 7px 0;
 }
 table {
   margin-top: 50px;
