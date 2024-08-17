@@ -10,15 +10,34 @@
 
 <body>
   <div class="head">
-    <button class="add">+ Add event</button>
-    <button class="del">- Delete all events</button>
+    <button class="addEvent">+ Add event</button>
+    <button class="del">Delete all events</button>
   </div>
   
   <div class="addEventModal">
     <p>Add your coming up event here!</p>
-    <input type="text" placeholder="Enter event name">
-    <button class="add">Add</button>
+    <input class="entry"  type="text" placeholder="Enter event name">
+    <div class="actions">
+      <button class="add">Add</button>
+      <button class="cancel">Cancel</button>
+    </div>
   </div>
+  
+  <table>
+    <tr>
+      <th>Entry</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Wash my cloth</td>
+      <td>
+        <button class="complete">✔️ Done</button>
+      </td>
+    </tr>
+  </table>
+  
+  
+  <script src="script.js"></script>
 </body>
 
 </html>

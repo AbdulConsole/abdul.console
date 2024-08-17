@@ -16,7 +16,7 @@ body {
 }
 
 .head {
-  /*background: red;*/
+  margin-top: 20px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -32,7 +32,8 @@ button {
   font-weight: 600;
   letter-spacing: 2.8;
   border-radius: 7px;
-  box-shadow: 1px 1px 1px #141A399E;
+  /*box-shadow: 1px 1px 1px #141A399E;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .del {
@@ -41,18 +42,24 @@ button {
 }
 
 .addEventModal {
-  margin-top: 200px;
-  /*border: 1px solid #eee;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*margin-top: 200px;
+  border: 1px solid #eee;*/
   background: #FFFFFF;
-  box-shadow: 1px 1px 1px #141A399E;
+  /*box-shadow: 1px 1px 1px #141A399E;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-  height: 150px;
+  min-height: 150px;
   width: 300px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-size: 22px;
+  padding: 10px;
 }
 
 .addEventModal input {
@@ -61,4 +68,17 @@ button {
   background: #E2E4FF;
   border-radius: 5px;
   padding: 4px;
+}
+table {
+  margin-top: 50px;
+  width: 350px;
+  text-align: left;
+  /*border: 1px solid black;*/
+}
+table tr td, th {
+  /*background: red;*/
+  padding: 10px 0;
+}
+.actions button {
+  margin: 0 20px;
 }
