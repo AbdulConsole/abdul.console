@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning Vue.js</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="head">
+            <div>Profile Generator</div>
+            <div><a href="abdulconsole.github.io">Home</a></div>
+        </div>
+        <div id="app">
+            <img :class="gender" v-bind:src="image" alt="`${firstName} ${lastName}`" />
+            <h1>{{title}}. {{firstName}} {{lastName}}</h1>
+            <h3>Email: {{email}}</h3>
+            <button v-on:click="getUsers()" :class="gender">Generate new user</button>
+            <button @click="openInNewTab('https://abdulconsole.github.io')" class="me">About me</button>
+        </div>
+    
+        <script>
+const app = Vue.createApp({
+    data() {
+        return {
+            title: "Mr",
+            firstName: "Abdul",
+            lastName: "Console",
+            email: "abdulconsole@gmail.com",
+            gender: "male",
+            image: "https://blob.sololearn.com/avatars/327a5987-597c-4db0-aefc-f60271498b6c.jpg"
+        }
+    },
+    methods: {
+        async getUsers() {
+            const res = await fetch('https://randomuser.me/api/')
+            const { results } = await res.json()
+             
+            this.title = results[0].name.title,
+            this.firstName = results[0].name.first,
+            this.lastName = results[0].name.last,
+            this.email = results[0].email,
+            this.gender = results[0].gender,
+            this.image = results[0].picture.large
+        },
+        openInNewTab(url) {
+          window.open(url, '_blank', 'noreferrer');
+    },
+    }
+  
+})
+
+app.mount('#app')
+        </script>
+    </body>
+</html>
