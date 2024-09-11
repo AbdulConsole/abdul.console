@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             };
         } catch (error) {
-            console.error('Error fetching dog image:', error);
+            console.error('Error fetching dog info:', error);
             breedDisplay.textContent = 'Error loading image';
             spinner.style.display = 'none';
         }
