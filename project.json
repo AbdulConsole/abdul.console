@@ -34,6 +34,11 @@
             "name": "Weather ☁️ App",
             "thumbnail": "assets/images/thumbnail-7.jpg",
             "url": "./weather"
+        },
+        {
+            "name": "My Cream Store 🏬",
+            "thumbnail": "assets/images/thumbnail-8.jpg",
+            "url": "https://abdulconsole.github.io/cstore/"
         }
     ]
 }
