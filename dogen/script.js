@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const response = await fetch('https://dog.ceo/api/breeds/image/random');
             const data = await response.json();
-            const imageUrl = data.message;
+            const imageUrl = await data.message;
 
             
 
